@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nabil Kamal | Enlaces personales</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', Arial, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.14), transparent 25%),
+                  radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.12), transparent 18%),
+                  linear-gradient(135deg, #1e293b, #0f172a);
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 430px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 32px;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.35);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      padding: 32px 28px 18px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background: rgba(56, 189, 248, 0.18);
+      border-radius: 50%;
+      filter: blur(18px);
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      border: 3px solid rgba(56, 189, 248, 0.7);
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    h1 {
+      font-size: 1.95rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      color: #94a3b8;
+      line-height: 1.7;
+      margin-bottom: 26px;
+      font-size: 0.98rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.16);
+      color: #e2e8f0;
+      font-size: 0.86rem;
+      margin-bottom: 16px;
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+      padding: 0 20px 24px;
+    }
+
+    .link-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 22px;
+      padding: 16px 18px;
+      color: #e2e8f0;
+      text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      font-weight: 600;
+    }
+
+    .link-btn:hover {
+      transform: translateY(-4px);
+      background: rgba(56, 189, 248, 0.14);
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+
+    .link-btn span {
+      flex: 1;
+      text-align: left;
+      font-size: 1rem;
+    }
+
+    .link-btn i {
+      width: 36px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 50%;
+      background: rgba(30, 41, 59, 0.85);
+      color: #38bdf8;
+      font-size: 1.05rem;
+      flex-shrink: 0;
+    }
+
+    .footer {
+      padding: 18px 24px 26px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: #94a3b8;
+      border-top: 1px solid rgba(148, 163, 184, 0.08);
+    }
+
+    @media (max-width: 380px) {
+      .wrapper {
+        border-radius: 24px;
+      }
+
+      .hero {
+        padding: 28px 18px 16px;
+      }
+
+      .links {
+        padding: 0 16px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="hero">
+      <img src="tu-imagen.png" alt="Nabil Kamal" class="avatar" />
+      <div class="badge"><i class="fas fa-star"></i> Página de enlaces personales</div>
+      <h1>Nabil Kamal</h1>
+      <p class="subtitle">¡Bienvenido! Descubre aquí mis enlaces personales y profesionales.</p>
+    </section>
+
+    <div class="links">
+      <a class="link-btn" href="#" target="_blank">
+        <span>Currículum</span>
+        <i class="fas fa-file-alt"></i>
+      </a>
+      <a class="link-btn" href="https://www.linkedin.com/in/nabil-kamal-fahmy/" target="_blank">
+        <span>LinkedIn</span>
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a class="link-btn" href="https://www.instagram.com/nabilkamalfahmy/" target="_blank">
+        <span>Instagram</span>
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a class="link-btn" href="https://www.facebook.com/specialist.nabilfahmy" target="_blank">
+        <span>Facebook</span>
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a class="link-btn" href="https://wa.me/34602479278" target="_blank">
+        <span>WhatsApp</span>
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a class="link-btn" href="https://github.com/Center-usa" target="_blank">
+        <span>Proyectos</span>
+        <i class="fas fa-code"></i>
+      </a>
+      <a class="link-btn" href="mailto:nabilkamalfahmy@gmail.com" target="_blank">
+        <span>Correo</span>
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <div class="footer">
+      © 2026 Nabil Kamal. Todos los derechos reservados.
+    </div>
+  </div>
+</body>
+</html>
