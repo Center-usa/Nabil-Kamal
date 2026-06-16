@@ -64,9 +64,11 @@
       height: 110px;
       border-radius: 50%;
       border: 3px solid rgba(56, 189, 248, 0.7);
+      background-color: #111827;
       object-fit: cover;
       display: block;
       margin: 0 auto 18px;
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.25);
     }
 
     h1 {
@@ -111,20 +113,78 @@
       padding: 16px 18px;
       color: #e2e8f0;
       text-decoration: none;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
       font-weight: 600;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+      cursor: pointer;
     }
 
     .link-btn:hover {
       transform: translateY(-4px);
       background: rgba(56, 189, 248, 0.14);
       border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.18);
+    }
+
+    .link-btn:focus-visible {
+      outline: 2px solid rgba(56, 189, 248, 0.9);
+      outline-offset: 3px;
     }
 
     .link-btn span {
       flex: 1;
       text-align: left;
       font-size: 1rem;
+    }
+
+    details.site-dropdown {
+      margin-top: 4px;
+    }
+
+    details.site-dropdown summary {
+      all: unset;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+      border-radius: 22px;
+      padding: 16px 18px;
+      color: #e2e8f0;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+      transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    details.site-dropdown summary:hover {
+      transform: translateY(-2px);
+      background: rgba(56, 189, 248, 0.14);
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.18);
+    }
+
+    details.site-dropdown summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.site-dropdown[open] summary {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .dropdown-links {
+      display: grid;
+      gap: 10px;
+      margin-top: 0;
+      padding-left: 0;
+    }
+
+    .link-btn.dropdown-item {
+      padding: 12px 18px;
     }
 
     .link-btn i {
@@ -169,13 +229,49 @@
       <img src="tu-imagen.png" alt="Nabil Kamal" class="avatar" />
       <div class="badge"><i class="fas fa-star"></i> Página de enlaces personales</div>
       <h1>Nabil Kamal</h1>
-      <p class="subtitle">¡Bienvenido! Descubre aquí mis enlaces personales y profesionales.</p>
+      <p class="subtitle">Conecta conmigo y descubre mis enlaces profesionales en un solo lugar.</p>
     </section>
 
     <div class="links">
       <a class="link-btn" href="#" target="_blank">
         <span>Currículum</span>
         <i class="fas fa-file-alt"></i>
+      </a>
+      <details class="site-dropdown">
+        <summary class="link-btn">
+          <span>Proyectos web en vivo</span>
+          <i class="fas fa-chevron-down"></i>
+        </summary>
+        <div class="dropdown-links">
+          <a class="link-btn dropdown-item" href="https://lyxup.app/" target="_blank">
+            <span>Lyxup</span>
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="link-btn dropdown-item" href="https://marhaban.es/" target="_blank">
+            <span>Marhaban</span>
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="link-btn dropdown-item" href="https://albab.org/" target="_blank">
+            <span>Albab</span>
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="link-btn dropdown-item" href="https://diasporaministry.es/" target="_blank">
+            <span>Diaspora Ministry</span>
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="link-btn dropdown-item" href="https://center-usa.github.io/Eleven-N/" target="_blank">
+            <span>Eleven-N (Menú Restaurante)</span>
+            <i class="fas fa-globe"></i>
+          </a>
+          <a class="link-btn dropdown-item" href="https://amuseiptv.com/" target="_blank">
+            <span>Amuse IPTV</span>
+            <i class="fas fa-globe"></i>
+          </a>
+        </div>
+      </details>
+      <a class="link-btn" href="https://github.com/Center-usa" target="_blank">
+        <span>GitHub</span>
+        <i class="fab fa-github"></i>
       </a>
       <a class="link-btn" href="https://www.linkedin.com/in/nabil-kamal-fahmy/" target="_blank">
         <span>LinkedIn</span>
@@ -192,10 +288,6 @@
       <a class="link-btn" href="https://wa.me/34602479278" target="_blank">
         <span>WhatsApp</span>
         <i class="fab fa-whatsapp"></i>
-      </a>
-      <a class="link-btn" href="https://github.com/Center-usa" target="_blank">
-        <span>Proyectos</span>
-        <i class="fas fa-code"></i>
       </a>
       <a class="link-btn" href="mailto:nabilkamalfahmy@gmail.com" target="_blank">
         <span>Correo</span>
